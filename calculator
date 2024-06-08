@@ -1,0 +1,112 @@
+import math
+
+def add(firstNumber, secondNumber):
+    return firstNumber + secondNumber
+
+def subtract(firstNumber, secondNumber):
+    return firstNumber - secondNumber
+
+def multiply(firstNumber, secondNumber):
+    return firstNumber * secondNumber
+
+def divide(firstNumber, secondNumber):
+    return firstNumber / secondNumber
+
+def power(firstNumber, secondNumber):
+    return math.pow(firstNumber, secondNumber)
+
+def square(firstNumber):
+    return firstNumber * firstNumber
+
+def squareRoot(firstNumber):
+    return math.sqrt(firstNumber)
+
+def cube(firstNumber):
+    return firstNumber * firstNumber * firstNumber
+
+def cubeRoot(firstNumber):
+    return math.pow(firstNumber, 1/3)
+
+def factorial(firstNumber):
+    return math.factorial(int(firstNumber))
+
+def sin(firstNumber):
+    return math.sin(firstNumber)
+
+def cos(firstNumber):
+    return math.cos(firstNumber)
+
+def tan(firstNumber):
+    return math.tan(firstNumber)
+
+def logarithm(firstNumber):
+    return math.log(firstNumber)
+
+def exponent(firstNumber):
+    return math.exp(firstNumber)
+
+def modulus(firstNumber, secondNumber):
+    return firstNumber % secondNumber
+
+def absolute(firstNumber):
+    return abs(firstNumber)
+
+def ceiling(firstNumber):
+    return math.ceil(firstNumber)
+
+def floor(firstNumber):
+    return math.floor(firstNumber)
+
+print('Welcome to the calculator!\nHere are the operations you can do (note: you have to write the operations as they are written): \n1. add \n2. subtract \n3. multiply \n4. divide \n5. power \n6. square \n7. square root \n8. cube \n9. cube root \n10. factorial \n11. sin \n12. cos \n13. tan \n14. logarithm \n15. exponent \n16. modulus \n17. absolute \n18. ceiling \n19. floor \nEnjoy the calculator!')
+
+while True:
+    operation = input('Enter an operation: ')
+    if operation in ['power', 'square', 'square root', 'cube', 'cube root', 'factorial', 'sin', 'cos', 'tan', 'logarithm', 'exponent', 'absolute', 'ceiling', 'floor']:
+        firstNumber = float(input('Enter a number: '))
+        if operation == 'power' or operation == 'modulus':
+            secondNumber = float(input('Enter another number: '))
+    elif operation in ['add', 'subtract', 'multiply', 'divide', 'modulus']:
+        firstNumber = float(input('Enter a number: '))
+        secondNumber = float(input('Enter another number: '))
+    else:
+        print("Invalid operation. Please try again.")
+        continue
+
+    if operation == 'add':
+        print(add(firstNumber, secondNumber))
+    elif operation == 'subtract':
+        print(subtract(firstNumber, secondNumber))
+    elif operation == 'multiply':
+        print(multiply(firstNumber, secondNumber))
+    elif operation == 'divide':
+        print(divide(firstNumber, secondNumber))
+    elif operation == 'power':
+        print(power(firstNumber, secondNumber))
+    elif operation == 'square':
+        print(square(firstNumber))
+    elif operation == 'square root':
+        print(squareRoot(firstNumber))
+    elif operation == 'cube':
+        print(cube(firstNumber))
+    elif operation == 'cube root':
+        print(cubeRoot(firstNumber))
+    elif operation == 'factorial':
+        print(factorial(firstNumber))
+    elif operation == 'sin':
+        print(sin(firstNumber))
+    elif operation == 'cos':
+        print(cos(firstNumber))
+    elif operation == 'tan':
+        print(tan(firstNumber))
+    elif operation == 'logarithm':
+        print(logarithm(firstNumber))
+    elif operation == 'exponent':
+        print(exponent(firstNumber))
+    elif operation == 'modulus':
+        print(modulus(firstNumber, secondNumber))
+    elif operation == 'absolute':
+        print(absolute(firstNumber))
+    elif operation == 'ceiling':
+        print(ceiling(firstNumber))
+    elif operation == 'floor':
+        print(floor(firstNumber))
